@@ -1,0 +1,187 @@
+:root {
+	--bgC: #0d0d0d;
+	--menuC: #000;
+	--cogF: invert(30%);
+	--arF: invert(55%);
+	--menuLogoFS: 45px;
+	--menuLogoFC: rgb(136, 68, 11, 1);
+	--menuLogoFC-H: rgb(186, 108, 51, 1);
+	//--menuLogoFC-H:  #999;
+	--menuLogo: invert(21%) sepia(37%) saturate(5422%) hue-rotate(31deg) brightness(92%) contrast(91%);
+	--menuLogoCC-H: invert(55%);
+}
+
+@font-face {
+	src: url(fonts/impact.ttf);
+	font-family: impact;
+}
+
+.Standard-Font {
+	font-family: 'Amatic SC', cursive;
+	color: var(--menuLogoFC);
+}
+
+.option-Font {
+	font-size: 40px;
+	text-align: center;
+}
+
+.option-Font:hover {
+	animation: OptionShake 0.2s infinite;
+	cursor: pointer;
+	color: var(--menuLogoFC-H);
+}
+
+body {
+	position: relative;
+	margin: 0px;
+	//background: #88440d;
+	background: #0d0d0d;
+	background-image: url(img/background/Contact3.png);
+	background-size: 2000px 1200px;
+	background-position: top;
+	background-repeat: no-repeat;
+	overflow-x: hidden;
+}
+
+#container {
+	position: relative;
+	top: 20%;
+	min-height: 100%;
+	margin-bottom: 300px;
+}
+
+#contactDiv {
+	position: relative;
+	//background: rgb(17, 17, 17, 1);
+}
+
+#instration {
+	position: relative;
+	left: 5%;
+	height: 600px;
+	width: 90%;
+	background: rgb(17, 17, 17, 1);
+	border-radius: 20px;
+	box-shadow: 20px 10px 10px rgb(0, 0, 0, 0.7);
+}
+
+#instrationTheme {
+	position: relative;
+	top: 15%;
+	text-align: center;
+	font-size: 90px;
+	font-weight: 600;
+}
+
+#instrationText {
+	position: relative;
+	top: 15%;
+	text-align: center;
+	font-size: 40px;
+	padding-left: 30px;
+	padding-right: 30px;
+	color: var(--menuLogoFC);
+}
+
+#contact {
+	position: relative;
+	left: 5%;
+	height: 600px;
+	width: 90%;
+	background: rgb(17, 17, 17, 1);
+	border-radius: 20px;
+	box-shadow: 20px 10px 10px rgb(0, 0, 0, 0.7);
+}
+
+#contact h4 {
+	position: relative;
+	top: 2%;
+	width: 100%;
+	font-size: 40px;
+	text-align: center;
+	//background: rgb(90, 0, 0, 0.4);
+}
+
+.contactBrick {
+	position: relative;
+	top: 2%;
+	left: 2%;
+	margin-top: 2%;
+	height: 20%;
+	width: 96%;
+	background: rgb(13, 13, 13);
+}
+
+.brickAvatar {
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	transform: translate(-50%, -50%);
+	height: 60%;
+	aspect-ratio: 1/1;
+	background-position: center;
+	background-size: 100% 100%;
+	border-radius: 100px;
+	border: solid 3px rgb(136, 68, 11, 1);
+}
+
+#Kemir-Brick .brickAvatar {
+	background-image: url(img/avatars/placeholder/Kemir.png);
+
+}
+
+#Portoli-Brick .brickAvatar {
+	background-image: url(img/avatars/placeholder/Portoli4.png);
+
+}
+
+.brickInfo {
+	position: absolute;
+	top: 50%;
+	left: 60%;
+	transform: translate(-50%, -50%);
+	height: 50%;
+	width: 70%;
+	//background: rgb(90, 0, 0, 0.4);
+}
+
+.brickText {
+	position: relative;
+	left: 4%;
+	//font-family: sans-serif;
+	color: var(--menuLogoFC);
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 30px;
+}
+
+.brickText p {
+	position: relative;
+	left: 0;
+	font-family: 'Amatic SC', cursive;
+	font-weight: 300;
+	color: var(--menuLogoFC);
+	font-size: 25px;
+	color: rgb(186, 108, 51, 1);
+	display: inline;
+	padding-right: 15px;
+}
+
+@keyframes OptionShake {
+	0% {
+		filter: url("#shake0");
+	}
+
+	25% {
+		filter: url("#shake1");
+	}
+
+	75% {
+		filter: url("#shake2");
+	}
+
+	100% {
+		filter: url("#shake3");
+	}
+}

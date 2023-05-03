@@ -1,0 +1,144 @@
+:root {
+	--bgC: #0d0d0d;
+	--menuC: #000;
+	--cogF: invert(30%);
+	--arF: invert(55%);
+	--menuLogoFS: 45px;
+	--menuLogoFC: rgb(136, 68, 11, 1);
+	--menuLogoFC-H: rgb(186, 108, 51, 1);
+	//--menuLogoFC-H:  #999;
+	--menuLogo: invert(21%) sepia(37%) saturate(5422%) hue-rotate(31deg) brightness(92%) contrast(91%);
+	--menuLogoCC-H: invert(55%);
+}
+
+@font-face {
+	src: url(fonts/impact.ttf);
+	font-family: impact;
+}
+
+.Standard-Font {
+	font-family: 'Amatic SC', cursive;
+	color: var(--menuLogoFC);
+}
+
+.option-Font {
+	font-size: 40px;
+	text-align: center;
+}
+
+.option-Font:hover {
+	animation: OptionShake 0.2s infinite;
+	cursor: pointer;
+	color: var(--menuLogoFC-H);
+}
+
+body {
+	position: relative;
+	background: #88440d;
+	margin: 0px;
+	//overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+#container {
+	min-height: 100%;
+
+}
+
+#galeryBackImg {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	height: 900px;
+	width: 1920px;
+}
+
+
+#galeryTextDiv {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: 9;
+	height: 400px;
+	width: 100vw;
+	text-align: center;
+	word-spacing: 5px;
+	//background: #0d0d0d;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#galeryTextTheme {
+	position: relative;
+	top: 50%;
+	font-size: 80px;
+	font-weight: 600;
+}
+
+#galeryText {
+	position: relative;
+	top: 50%;
+	font-size: 40px;
+	font-weight: 300;
+	//background: #0d0d0d;
+}
+
+
+#galery {
+	position: relative;
+	z-index: 2;
+	//background: blue;
+	margin-top: 110px;
+	margin-bottom: 200px;
+}
+
+.cardDiv:hover .cardHoverInfo {
+	display: block;
+}
+
+.card {
+	position: relative;
+	height: 100%;
+	background: red;
+	border: solid 4px #0d0d0d;
+}
+
+.cardHoverInfo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: calc(100% - 32px);
+	width: calc(100% - 28px);
+	background: rgb(0, 0, 0, 0.6);
+	border-radius: 10px;
+	display: none;
+}
+
+.imgNames {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: 90%;
+	color: #aaa;
+	word-wrap: break-word;
+}
+
+@keyframes OptionShake {
+	0% {
+		filter: url("#shake0");
+	}
+
+	25% {
+		filter: url("#shake1");
+	}
+
+	75% {
+		filter: url("#shake2");
+	}
+
+	100% {
+		filter: url("#shake3");
+	}
+}

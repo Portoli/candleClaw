@@ -1,0 +1,97 @@
+:root {
+	--bgC: #0d0d0d;
+	--menuC: #000;
+	--cogF: invert(30%);
+	--arF: invert(55%);
+	--menuLogoFS: 45px;
+	--menuLogoFC: rgb(136, 68, 11, 1);
+	--menuLogoFC-H: rgb(186, 108, 51, 1);
+	//--menuLogoFC-H:  #999;
+	--menuLogo: invert(21%) sepia(37%) saturate(5422%) hue-rotate(31deg) brightness(92%) contrast(91%);
+	--menuLogoCC-H: invert(55%);
+}
+
+@font-face {
+	src: url(fonts/impact.ttf);
+	font-family: impact;
+}
+
+.Standard-Font {
+	font-family: 'Amatic SC', cursive;
+	color: var(--menuLogoFC);
+}
+
+.option-Font {
+	font-size: 40px;
+	text-align: center;
+}
+
+.option-Font:hover {
+	animation: OptionShake 0.2s infinite;
+	cursor: pointer;
+	color: var(--menuLogoFC-H);
+}
+
+body {
+	position: relative;
+	margin: 0px;
+	//background: #88440d;
+	background: #0d0d0d;
+	background-image: url(img/background/Contact3.png);
+	background-size: 2000px 1200px;
+	background-position: top;
+	background-repeat: no-repeat;
+	overflow-x: hidden;
+}
+
+#container {
+	position: relative;
+	top: 20%;
+	margin-bottom: 300px;
+}
+
+#discordDiv {
+	position: relative;
+	//background: rgb(17, 17, 17, 1);
+	height: 70%;
+	//background: red;
+}
+
+#discordText {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: rgb(136, 68, 11, 1);
+	font-size: 110px;
+	font-weight: 300;
+	font-family: impact;
+}
+
+.contactBrick {
+	position: relative;
+	top: 2%;
+	left: 2%;
+	margin-top: 2%;
+	height: 20%;
+	width: 96%;
+	background: rgb(13, 13, 13);
+}
+
+@keyframes OptionShake {
+	0% {
+		filter: url("#shake0");
+	}
+
+	25% {
+		filter: url("#shake1");
+	}
+
+	75% {
+		filter: url("#shake2");
+	}
+
+	100% {
+		filter: url("#shake3");
+	}
+}

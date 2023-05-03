@@ -1,0 +1,682 @@
+:root {
+	--bgC: #0d0d0d;
+	--menuC: #000;
+	--cogF: invert(18%) sepia(98%) saturate(2532%) hue-rotate(34deg) brightness(95%) contrast(91%);
+	--arF: invert(55%);
+	--menuLogoFS: 45px;
+	--menuLogoFC: rgb(136, 68, 11, 1);
+	--menuLogoFC-H: rgb(186, 108, 51, 1);
+	--menuLogo: invert(21%) sepia(37%) saturate(5422%) hue-rotate(31deg) brightness(92%) contrast(91%);
+	--menuLogoCC-H: invert(55%);
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1900px !important;
+	}
+}
+
+@font-face {
+	src: url(fonts/impact.ttf);
+	font-family: impact;
+}
+
+body {
+	margin: 0px;
+	overflow-x: hidden;
+
+	background: var(--bgC);
+}
+
+.Standard-Font {
+	font-family: 'Amatic SC', cursive;
+	color: var(--menuLogoFC);
+}
+
+.option-Font {
+	font-size: 40px;
+	text-align: center;
+}
+
+.option-Font:hover {
+	animation: OptionShake 0.2s infinite;
+	cursor: pointer;
+	color: var(--menuLogoFC-H);
+}
+
+
+#loadScreen {
+	position: fixed;
+	top: 0px;
+	z-index: 101;
+	height: 100vh;
+	width: 100vw;
+	background-color: #0d0d0d;
+	opacity: 1;
+	transition: opacity 0.5s ease-in-out 0s;
+	overflow: hidden;
+}
+
+#logoContainer {
+	position: absolute;
+	top: 48%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 101;
+	height: 30%;
+	aspect-ratio: 1 / 1;
+	opacity: 1;
+	transition: opacity 0.2s linear 0s;
+}
+
+#cogContainer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+#logoContainer svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#pathCogIn,
+#pathCogOut,
+#pathA,
+#pathB {
+	transform: scale(3);
+}
+
+#cog2Container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+.cogwheel2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 100%;
+	aspect-ratio: 1 / 1;
+	filter: var(--cogF);
+}
+
+#cw0 {
+	background-image: url(img/logo/png/CWV0.png);
+	background-size: 100% 100%;
+	opacity: 0;
+}
+
+#cw1 {
+	background-image: url(img/logo/png/CWV1.png);
+	background-size: 100% 100%;
+	opacity: 0;
+}
+
+#cw2 {
+	background-image: url(img/logo/png/CWV2.png);
+	background-size: 100% 100%;
+	opacity: 0;
+}
+
+#cw3 {
+	background-image: url(img/logo/png/CWV3.png);
+	background-size: 100% 100%;
+	opacity: 0;
+}
+
+#cw4 {
+	background-image: url(img/logo/png/CWV4.png);
+	background-size: 100% 100%;
+	opacity: 0;
+}
+
+#cw5 {
+	background-image: url(img/logo/png/CWV5.png);
+	background-size: 100% 100%;
+	opacity: 0;
+}
+
+#cw6 {
+	background-image: url(img/logo/png/CWV6.png);
+	background-size: 100% 100%;
+	opacity: 0;
+}
+
+#cw7 {
+	background-image: url(img/logo/png/CWV7.png);
+	background-size: 100% 100%;
+	opacity: 0;
+}
+
+.part_margin {
+	margin-top: 30vh;
+}
+
+#container {
+	position: relative;
+	top: 0px;
+	width: 100%;
+	background: var(--bgC);
+}
+
+#part-intro {
+	position: relative;
+	top: 0px;
+	height: 100vh;
+	width: 100%;
+}
+
+#screen1Back {
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	height: 100%;
+	width: 100vw;
+	background: url(img/background/BlackCandle1.png);
+	background-size: 100% 100%;
+	background-position: center;
+}
+
+#screen1Front {
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	height: 100%;
+	width: 100vw;
+	background: url(img/background/Screen1Front2.png);
+	background-size: 100% 100%;
+}
+
+#introTextDiv {
+	margin-bottom: 10%;
+	width: 40%;
+}
+
+#introTextDiv-v2 {
+	margin-top: 10%;
+	width: 100%;
+}
+
+#introTextTheme {
+	font-size: 80px;
+	color: rgb(136, 68, 11, 1);
+	font-weight: 700;
+}
+
+#introText {
+	font-size: 40px;
+	color: rgb(136, 68, 11, 1);
+	font-weight: 400;
+}
+
+#part-showcase {
+	position: relative;
+	left: 5%;
+	height: 100vh;
+	width: 90%;
+}
+
+#showcaseImgs {
+	position: absolute;
+	top: 2%;
+	right: 30%;
+	height: 100%;
+	width: 80%;
+
+	overflow: hidden;
+}
+
+#showcaseLine {
+	position: relative;
+	top: 0;
+	left: 0%;
+	height: 100%;
+	width: 400%;
+	display: flex;
+	justify-content: left;
+	transition: left 1s ease-in-out;
+}
+
+.showcaseImg {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+#ScI0 {
+	background-image: url(img/showcase/PlaceHolder1.png);
+	background-size: 120% 100%;
+	background-position: center;
+}
+
+#ScI1 {
+	background-image: url(img/showcase/PlaceHolder2.png);
+	background-size: 100% 100%;
+}
+
+#ScI2 {
+	background-image: url(img/showcase/PlaceHolder3.png);
+	background-size: 100% 100%;
+}
+
+#ScI3 {
+	background-image: url(img/showcase/PlaceHolder4.png);
+	background-size: 120% 100%;
+	background-position: center;
+}
+
+.showcaseCover {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url(img/showcase/screenCover1.png);
+	background-size: 100% 100%;
+}
+
+#showcaseController {
+	position: absolute;
+	top: 90%;
+	left: 50%;
+	height: 5%;
+	width: 30%;
+	transform: translate(-50%, -50%);
+	border-radius: 20px;
+
+	display: flex;
+	justify-content: space-around;
+}
+
+.dotMark {
+	position: relative;
+	top: calc(30% - 3px);
+	height: 40%;
+	aspect-ratio: 1/1;
+	border-radius: 200px;
+	border: solid rgb(136, 68, 11, 1) 3px;
+}
+
+.dotMark:hover {
+	background: rgb(136, 68, 11, 1);
+}
+
+.ScMON {
+	background: rgb(136, 68, 11, 1);
+}
+
+#showcaseTextDiv {
+	position: absolute;
+	top: 10%;
+	right: 0;
+	z-index: 10;
+	height: 30%;
+	width: 30%;
+}
+
+#showcaseTextDiv-v2 {
+	position: relative;
+	z-index: 10;
+	height: 100%;
+	width: 100%;
+}
+
+.showcaseTextTheme {
+	font-size: 80px;
+	font-weight: 700;
+}
+
+.showcaseText {
+	font-size: 40px;
+}
+
+.showcaseGalleryButton {
+	margin-top: 5%;
+	width: 100%;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+.showcaseGalleryButton:hover {
+	animation: OptionShake 0.2s infinite;
+	cursor: pointer;
+	color: var(--menuLogoFC-H);
+}
+
+#part-discord {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+}
+
+#con3BG {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	height: 100%;
+	width: 100vw;
+	background-image: url("img/+/con3BG.png");
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#con3BG1 {
+	position: absolute;
+	top: 12.5%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	height: 100%;
+	width: 100vw;
+	background-image: url("img/+/con3BG1.png");
+	background-size: 100% 100%;
+	background-position: center;
+}
+
+#con3BG2 {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	height: 100%;
+	width: 100vw;
+	background-image: url("img/+/con3BG2-D.png");
+	background-size: 100% 100%;
+	background-position: center;
+}
+
+#discord-content {
+	position: absolute;
+	top: 20%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#disBox {
+	position: absolute;
+	top: 55%;
+	left: 5%;
+	transform: translate(0%, -50%);
+	height: 60%;
+	width: 60%;
+	border: solid #88440b 5px;
+}
+
+#disBG {
+	height: 100%;
+	width: 100%;
+	background-image: url("img/+/DisSC.png");
+	background-size: 100% 100%;
+	background-position: 0% 0%;
+	filter: brightness(25%);
+}
+
+#disPopup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 70%;
+	aspect-ratio: 1/1;
+	background-image: url("img/+/DisPopup.png");
+	background-size: 100% 100%;
+}
+
+#disPopupBR {
+	position: absolute;
+	bottom: 4.5%;
+	right: 4.4%;
+	height: 7.6%;
+	aspect-ratio: 2.9/1;
+	border-radius: 5%;
+	background: #7289da;
+	animation: buttonC 2s linear infinite;
+}
+
+#disPopupBR:hover {
+	cursor: pointer;
+	background: #92a9fa;
+	animation: none;
+}
+
+#disPopupBRText {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 2.5vh;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	color: #fff;
+}
+
+#disPopupBL {
+	position: absolute;
+	bottom: 6%;
+	right: 31%;
+	height: 5%;
+	aspect-ratio: 2.4/1;
+	background: #35383c;
+}
+
+#disPopupBL:hover {
+	cursor: pointer;
+	background-image: url("img/+/Cry.png");
+	background-size: 40%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#disPopupBL:hover #disPopupBLText {
+	opacity: 0;
+}
+
+#disPopupBLText {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 2.5vh;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 600;
+	color: #fff;
+}
+
+#disPlaceHolder {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(35deg);
+	width: 100%;
+	height: 80px;
+	text-align: center;
+	font-size: 80px;
+	font-weight: 600;
+	font-family: impact;
+	color: #bb1111;
+}
+
+#disTextDiv {
+	position: absolute;
+	top: 23%;
+	left: 70%;
+	z-index: 10;
+	height: 30%;
+	width: 30%;
+}
+
+#disTextDiv-v2 {
+	position: relative;
+	top: 200px;
+	width: 100%;
+}
+
+.disTextTheme {
+	font-size: 80px;
+	font-weight: 700;
+}
+
+.disText {
+	font-size: 40px;
+}
+
+.disButton {
+	margin-top: 5%;
+	width: 100%;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+.disButton:hover {
+	animation: OptionShake 0.2s infinite;
+	cursor: pointer;
+	color: var(--menuLogoFC-H);
+}
+
+#part-contact {
+	position: relative;
+	top: 200px;
+	left: 0;
+	margin-bottom: 25vh;
+	min-height: 100vh;
+}
+
+#contactTextDiv {
+	position: relative;
+	left: 20%;
+	height: fit-content;
+	width: 60%;
+}
+
+#contactTextTheme {
+	font-size: 80px;
+	font-weight: 700;
+	text-align: center;
+}
+
+#contactText {
+	height: auto;
+	font-size: 40px;
+	text-align: center;
+}
+
+#socialCards {
+	position: relative;
+	height: 50%;
+}
+
+.socialCard {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 90%;
+	width: fit-content;
+	background: rgb(17, 17, 17, 1);
+	box-shadow: 10px 20px 10px rgb(0, 0, 0, 0.5);
+}
+
+.Card-Font {
+	font-size: 40px;
+}
+
+.cardAvatar {
+	position: relative;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 30%;
+	aspect-ratio: 1/1;
+	background-position: center;
+	background-size: 100% 100%;
+	border-radius: 100px;
+	border: solid 3px rgb(136, 68, 11, 1);
+}
+
+#card-Kemir .cardAvatar {
+	background-image: url(img/avatars/placeholder/Kemir.png);
+}
+
+#card-Portoli .cardAvatar {
+	background-image: url(img/avatars/placeholder/Portoli4.png);
+}
+
+.cardInfo {
+	position: relative;
+	top: 15%;
+	margin-left: 20px;
+	margin-right: 20px;
+	height: 40%;
+	text-align: center;
+}
+
+.cardDiscord::before {
+	position: relative;
+	content: 'Discord: ';
+	font-size: 30px;
+	color: rgb(186, 108, 51, 1);
+}
+
+.cardEmail::before {
+	position: relative;
+	content: 'Email:';
+	font-size: 30px;
+	color: rgb(186, 108, 51, 1);
+}
+
+@media all and (min-width: 1200px) {
+	.container {
+		width: 1900px;
+	}
+}
+
+@keyframes OptionShake {
+	0% {
+		filter: url("#shake0");
+	}
+
+	25% {
+		filter: url("#shake1");
+	}
+
+	75% {
+		filter: url("#shake2");
+	}
+
+	100% {
+		filter: url("#shake3");
+	}
+}
+
+@keyframes buttonC {
+	0% {
+		background: #7289da;
+	}
+
+	50% {
+		background: #32499a;
+	}
+
+	100% {
+		background: #7289da;
+	}
+}

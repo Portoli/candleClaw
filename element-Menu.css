@@ -1,0 +1,125 @@
+:root {
+    --bgC: #0d0d0d;
+    --menuC: #000;
+    --arF: invert(55%);
+    --menuLogoFS: 45px;
+    --menuLogoFC: rgb(136, 68, 11, 1);
+    --menuLogoFC-H: rgb(186, 108, 51, 1);
+    //--menuLogoFC-H:  #999;
+    --menuLogo: invert(21%) sepia(37%) saturate(5422%) hue-rotate(31deg) brightness(92%) contrast(91%);
+    --menuLogoCC-H: invert(55%);
+}
+
+#menuContainer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    height: 120px;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#menuBar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50%;
+    width: 100%;
+    background: var(--menuC);
+}
+
+#menuLogoContainer {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 13.5%;
+}
+
+#menuLogo {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background-image: url(img/logo/png/CandleClawFrontAura.png);
+    background-size: 90% 90%;
+    filter: var(--menuLogo);
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 200px;
+}
+
+#menuLogoLine {
+    position: absolute;
+    top: 50%;
+    left: 74px;
+    transform: translate(0px, -50%);
+    height: 80%;
+    width: 1px;
+    background: linear-gradient(180deg, var(--menuC) 0%, var(--menuLogoFC) 30%, var(--menuLogoFC) 70%, var(--menuC) 100%);
+}
+
+#menuLogoName {
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    height: 100%;
+    width: 68%;
+}
+
+#logoText {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translate(0px, -50%);
+    font-size: var(--menuLogoFS);
+    font-weight: 700;
+    color: var(--menuLogoFC);
+}
+
+#logoText:hover {
+    animation: OptionShake 0.2s infinite;
+    cursor: pointer;
+    color: var(--menuLogoFC-H);
+    text-decoration-color: var(--menuLogoFC-H);
+}
+
+#menuOptionsDiv {
+    position: absolute;
+    top: 5%;
+    right: 1%;
+    height: 90%;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#menuOptionsDiv a {
+    text-decoration: none;
+}
+
+.menu-Icon {
+    height: 50px;
+    width: 50px;
+}
+
+.icon-Galery {
+    background-image: url(img/+/Galery.png);
+    background-size: 100% 100%;
+    filter: invert(18%) sepia(98%) saturate(2532%) hue-rotate(34deg) brightness(95%) contrast(91%);
+}
+
+.icon-Discord {
+    background-image: url(img/+/Discord.png);
+    background-size: 100% 100%;
+    filter: invert(18%) sepia(98%) saturate(2532%) hue-rotate(34deg) brightness(95%) contrast(91%);
+}
+
+.icon-Contact {
+    background-image: url(img/+/Contact.png);
+    background-size: 100% 100%;
+    filter: invert(18%) sepia(98%) saturate(2532%) hue-rotate(34deg) brightness(95%) contrast(91%);
+}
